@@ -6,6 +6,7 @@
 #include <omp.h>
 
 /*
+ * Исользован материал из https://e-maxx.ru/algo/
  * -Xpreprocessor option
  * Pass option as an option to the preprocessor.
  * You can use this to supply system-specific preprocessor options that GCC does not recognize.
