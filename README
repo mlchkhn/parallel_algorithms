@@ -1,0 +1,8 @@
+Компиляция и запуск MPI-программ
+mpic++ -std=gnu++2a -lm thermal_conductivity.cpp -o tc
+mpirun -np 5 ./tc 500000 0.00000001
+где 5 - число процессоров, 500000 и 0.00000001 - входные данные задачи
+
+компиляция и запуск OpenMP-программы (на OS X)
+clang++ -Xpreprocessor -fopenmp -std=gnu++2a -I/usr/local/include -L/usr/local/lib -lomp  multiplication.cpp -o multiplication
+./multiplication
