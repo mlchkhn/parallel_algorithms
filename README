@@ -6,3 +6,6 @@ mpirun -np 5 ./tc 500000 0.00000001
 компиляция и запуск OpenMP-программы (на OS X)
 clang++ -Xpreprocessor -fopenmp -std=gnu++2a -I/usr/local/include -L/usr/local/lib -lomp  multiplication.cpp -o multiplication
 ./multiplication
+
+
+
