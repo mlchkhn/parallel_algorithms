@@ -22,9 +22,9 @@ double piece(int num, int rank, const int N) {
 
 int main(int argc, char *argv[])
 {
-        int num, rank; // ----------------------------------------------------- ?
+        int num, rank;
         const uint8_t main_thread = 0;
-        const int N = atoi(argv[1]); // как не клоннировать ------------------- ?
+        const int N = atoi(argv[1]);
 
         MPI_Init(&argc, &argv);
         double start = MPI_Wtime();
@@ -32,10 +32,9 @@ int main(int argc, char *argv[])
         MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
         if (rank == main_thread) {
-                MPI_Status status; // --------------------------------------------- ?
+                MPI_Status status;
                 double ans = 0;
                 ans += piece(num, rank, N);
-                // tag ------------------------------------------------------------ ?
                 int i;
                 for (i = 1; i < num; ++i) {
                         double result = 0;
